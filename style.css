@@ -1,0 +1,88 @@
+body {
+    font-size: 18px;
+}
+p {
+    color: red;
+    font-size: 12px;
+}
+div {
+    color: green;
+}
+.li-red { 
+    color: red;
+}
+.div-blue {
+    color: blue;
+    background-color: rgb(243, 177, 226);
+    width: 100px;
+    height: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left; /*文本对齐方式 left center right*/
+    text-decoration: rgb(14, 20, 1);
+    text-decoration-line: underline; /**/
+    text-indent: 2em; /*首行缩进，em表示一个文字的宽度*/
+    line-height: 26px; /*行高*/
+}
+
+/* 并集选择器，用逗号隔开，逗号之间可以写各种选择器（包括后代选择器、子选择器等） */
+.a-none, a {
+    text-decoration: none;
+}
+
+#id-style { /*定义id=id-style的元素的样式*/
+    color: rgba(135, 163, 238, 0.822);
+}
+
+/* 后代选择器 */
+ol li {
+    color: blue;
+}
+.nav li span {
+    color: blueviolet;
+}
+
+/* 子选择器 */
+ol > span {
+    font-size: 30px;
+}
+
+/***** 伪类选择器 *****/
+/**
+    伪类选择器用于向某些选择器添加效果，比如给链接添加特殊效果，或选择第1个，第n个元素。
+    伪类选择器书写最大的特点是用冒号（:），比如 :hover、:first-child
+    1.链接伪类选择器（按照LVHA，顺序不要颠倒）
+        a:link      选择所有未被访问过的链接
+        a:visited   选择所有已被访问过的链接
+        a:hover     选择鼠标指针位于其上的链接
+        a:active    选择活动链接（鼠标按下未弹起的链接）
+
+**/
+a:link {
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: blueviolet;
+}
+a:hover {
+    color: brown;
+    text-decoration-line: underline;
+}
+a:active {
+    color: cyan;
+}
+/**
+    input:focus     选取获得光标的表单
+**/
+input:focus {
+    background-color: pink;
+}
+
+/* 块元素div */
+div {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * { /* 星号设置所有元素属性，优先级较低，发生冲突时，其他设置生效而本设置不生效。一般放在第一行 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1.上下相邻的盒子，上盒子设置margin-bottom: 10px;，下盒子设置margin-top: 20px，
+            则两个盒子的边距不是二者之和30px，而是取较大者20px。这个问题叫做外边距合并问题，
+            解决方法是：只给一个盒子设置外边距即可。
+           2.父子盒子如果同时设置上边距margin-top:20px;，则父盒子相对原位置下移20px，子盒子
+           相对父盒子位置没变，这个问题叫做嵌套块元素外边距塌陷，解决方法是：给父元素设置overflow:hidden;
+
+
+        */
+        .upper {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: rgb(183, 113, 248);
+        }
+        .lower {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            background-color: rgb(252, 202, 109);
+        }
+        .parent {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            margin: 20px;
+            overflow: hidden; /* 防止子元素内边距凹陷问题 */
+        }
+        .parent div {
+            width: 150px;
+            height: 80px;
+            background-color: skyblue;
+            margin: 20px;
+        }
+        span {
+            /* 行内inline元素尽量只设置左右外边距，不要设置上下外边距（设置了也不生效），
+                但是将行内元素转为block或inline-block后就可以设置上下外边距了。
+            */
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="upper">上盒子</div>
+    <div class="lower">下盒子</div>
+    <div class="parent">
+        <div>
+            子盒子中的内容
+        </div>
+        <span>this is a span</span>
+    </div>
+</body>
+</html>

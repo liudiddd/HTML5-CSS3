@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 80px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: red;
+            /* border-radius: 15px; */
+            /* border-radius: 50%; */
+            border-radius: 10px 20px 30px 40px; /* 左上角开始，顺时针 */
+            color: cornsilk;
+            font-size: 20px;
+            text-align: center;
+        }
+        .box:hover {
+            /* box-shadow 设置盒子的阴影效果 
+                参数含义：
+                水平轴向右距离，垂直轴向下距离，模糊距离（0为不模糊，实边），阴影尺寸，阴影颜色
+            */
+            box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3); 
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        10
+    </div>
+</body>
+</html>

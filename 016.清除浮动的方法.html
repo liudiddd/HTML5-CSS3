@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            为什么要清除浮动？
+                1.父级没高度
+                2.子盒子浮动了
+                3.影响下面布局了，我们就应该清除浮动了
+            清除浮动的本质
+                清除浮动的本质就是清除浮动元素脱离标准流而造成的影响
+            清除浮动的方法
+            1.额外标签法，也称隔墙法，是W3C推荐的做法；
+                额外标签法就是在浮动元素同级的最后一个浮动元素加入一个带有clear:both的块级元素（不能是行内元素），
+                比如 <div style="clear:both"></div>，则该级元素的所有浮动效果就会被清除，变为inline-block样式。
+            2.父级添加overflow属性；
+                给父级元素添加overflow属性，比如overflow:hidden或overflow:auto。
+                子不教父之过。
+            3.父级添加after伪元素；
+                是额外标签法的升级版，利用:after动态生成子标签。
+                .clearfix:after {
+                    content: "";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+                .clearfix {  这是兼容IE6和IE7的固定写法 
+                    *zoom: 1;
+                }
+                然后给父元素加上clearfix类就可以了。
+                该方法优点是，只写css，不必增加额外的结构，不用像overflow那样会影响溢出的效果。
+                淘宝、网易、京东等都是用的这种方法清除浮动。
+            4.父级添加双伪元素；
+                :after只堵上了后门，再加上:before可以吧前门也堵上。
+                写法如下：
+                    .clearfix:before, .clearfix:after {
+                        content: "";
+                        display: table;
+                    }
+                    .clearfix:after {
+                        clear: both;
+                    }
+                    .clearfix {
+                        *zoom: 1;
+                    }
+
+        */
+         .box {
+            background-color: rgb(218, 233, 4);
+            /* overflow: hidden; */ /* 给子元素清除浮动 */
+         }
+         .damao {
+             float: left;
+            width: 80px;
+            height: 60px;
+            background-color: rgb(241, 122, 122);
+         }
+         .ermao {
+             float: left;
+            width: 80px;
+            height: 60px;
+            background-color: rgb(151, 110, 245);
+         }
+         .footer {
+             height: 200px;
+             background-color: #000;
+         }
+         .clear {
+             clear: both;
+         }
+         .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

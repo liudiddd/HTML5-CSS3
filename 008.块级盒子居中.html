@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 块级盒子水平居中的条件：
+            注意：只对block元素有效，对inline和inline-block元素无效！
+            1.盒子宽度width要设定
+            2.左右margin设置为auto
+
+            给inline元素和inline-block元素设置水平居中的方法：
+                将其父元素设置text-align:center; 即可，就是将子元素当做普通的文字即可。
+        */
+        .parent {
+            /* display: flex ; */
+            width: 400px;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto; /* 最外层div设置为margin: 0 auto; 表示相对于body元素水平居中，上下按原来显示 */
+            text-align: center; /* 让所有的子元素水平居中 */
+        }
+        .parent div {
+            /* display: inline-block; */
+            width: 50px;
+            height: 30px;
+            background-color: skyblue;
+            margin: auto;
+        }
+        .parent .div1 {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgb(176, 243, 145);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>
+            子盒子中的内容
+        </div>
+        <div>hello</div>
+        <a href="#">baidu</a>
+        <div class="div1">this is inline-block div</div>
+    </div>
+</body>
+</html>

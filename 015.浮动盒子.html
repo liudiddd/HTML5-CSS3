@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: rgb(194, 176, 176);
+        }
+        .c1 {
+            width: 80px;
+            height: 60px;
+            background-color: rgb(243, 144, 144);    
+        }
+        .c2 {
+            width: 80px;
+            height: 60px;
+            background-color: rgb(186, 236, 92);    
+            float: left; /* div浮动脱离文档流，但导致下面的div c3上移，但是div c3里面的内容不随着一起上移 */
+        }
+        .c3 {
+            width: 80px;
+            height: 60px;
+            background-color: rgb(158, 105, 243);    
+        }
+        .c4 {
+            width: 80px;
+            height: 60px;
+            background-color: rgb(77, 243, 221);    
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="c1">大毛</div>
+        <div class="c2">二毛<div>~~</div></div>
+        <!-- <div style="clear: both;"></div> --> 
+        <div class="c3">三毛<div>&&&</div></div>
+        <div class="c4">四毛</div>
+        
+    </div>
+</body>
+</html>

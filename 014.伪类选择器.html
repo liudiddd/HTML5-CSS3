@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            选择器s:first-child
+            官方解释：指定属于其父元素的第一个匹配的子元素。
+            
+        */
+        .box div:first-child p {
+            background-color: rgb(94, 243, 94);
+        }
+        .box p {
+            background-color: rgb(183, 217, 247);
+        }
+        .box p:first-child { /* 匹配最深层的p，即只匹配到 <p>第二个p</p>  */
+            color: red;
+        }
+        .box1 ul {
+            list-style: none;
+        }
+        .box1 ul li:first-child {
+            color: purple;
+        }
+        .box1 ul li:nth-child(2n+1) {
+            background-color: rgb(232, 252, 146);
+        }
+        .box1 ul li:nth-child(2n) {
+            background-color: rgb(146, 227, 252);
+        }
+        .box2 li:first {
+            background-color: rgb(248, 130, 195);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>我是第一个span</span>
+        <p>我是第一个p，在span后面</p> <!-- 虽然是p，但不是第父元素的第一个元素（第一个是上面的span），所以选不到 -->
+        <div><p>第二个p</p></div>
+        <div><p>第三个p</p></div>
+        <p>第四个p</p>
+        <div><div><p>第五个p</p></div></div>
+        <em>I am em</em>
+        <div><div><div><p>第六个p</p></div></div></div>
+        <p>iewnvk</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div class="box1">
+        <ul>
+            <li>夜空中最亮的行</li>
+            <li>夜空中最亮的行（吉他版）</li>
+            <li>蓝莲花</li>
+            <li>纵横江湖</li>
+            <li>许多年以后</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <ul>
+            <li>夜空中最亮的行</li>
+            <li>夜空中最亮的行（吉他版）</li>
+            <li>蓝莲花</li>
+            <li>纵横江湖</li>
+            <li>许多年以后</li>
+        </ul>
+    </div>
+</body>
+</html>

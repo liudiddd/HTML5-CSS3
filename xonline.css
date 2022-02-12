@@ -1,0 +1,352 @@
+/* 
+    通用配置 
+*/
+body {
+    background-color: rgb(243,245,247);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 清除浮动：清除父元素的浮动，防止因子元素浮动引起的父元素高度为0。加了清除浮动代码后，父元素会自动检测子元素的高度 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom:1;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    
+}
+a:hover { 
+    color: rgb(0, 164, 255, .9);
+} 
+input:focus-visible {
+    outline: none;
+}
+
+/* 
+    页面 
+*/
+/* 头部区域 */
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+.logo {
+    float: left;
+    width: 195px;
+    height: 42px;
+}
+.nav {
+    float: left;
+    height: 42px;
+    margin-left: 60px;
+}
+.nav li {
+    float: left;
+    margin: 0 15px;
+}
+.nav li a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 18px ;
+    color: rgb(5,5,5);
+    border: solid 3px rgb(245, 45, 45, 0);
+}
+.nav li a:visited {
+    color: rgb(5,5,5);
+}
+.nav li:hover {
+    border-bottom: solid 3px rgb(0, 164, 255, .9);
+}
+.nav li:hover a  {
+    color: rgb(0, 164, 255, .9);
+}
+
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    margin-left: 50px;
+}
+.search input{
+    float: left;
+    width: calc(100% - 50px - 15px - 1px);
+    height: 40px;
+    border: solid 1px rgb(0, 164, 255, .9);
+    border-right: 0;
+    font-size: 14px;
+    color: rgb(191, 191, 191);
+    padding-left: 15px;
+    background-color: rgb(0,0,0, .0);
+}
+.search button {
+    float: left;
+    border: none;
+    height: 42px;
+    width: 50px;
+    background: url(xonline/fa-search.png) no-repeat center center;
+    background-color: rgb(0, 164, 255, .9);
+}
+.user {
+    float: right;
+    height: 42px;
+
+}
+.user img {
+    margin-top: 5px;
+}
+.user span {
+    line-height: 42px;
+}
+
+/* banner区域 */
+.banner {
+    height: 420px;
+    background-color: rgb(28, 3, 108);
+}
+.banner .w {
+    height: 100%;
+    background: url(xonline/banner2.png) no-repeat top center;
+}
+/*左侧导航*/
+.subnav {
+    float: left;
+    width: 190px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+.subnav ul li a {
+    display: inline-block;
+    width: calc(100% - 40px);
+    line-height: 45px;
+    font-size: 14px;
+    color: rgb(191,191,191);
+    margin: 0 20px;
+    /*background: url(xonline/arrow3.png) no-repeat center right;*/
+}
+.subnav ul li a:hover { 
+    color: rgb(0, 164, 255, .9);
+}    
+.subnav ul li a span {
+    float: right;
+}
+/*右侧课程*/
+.course {
+    position: relative;
+    float: right;
+    margin-top: 50px;
+    width: 230px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    resize: both;
+    overflow: auto;
+}
+.my-course {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255,255,255);
+    background-color: rgb(155,206,234);
+}
+.course ul li {
+    height: 42px;
+    width: calc(100% - 40px);
+    margin: 18px 20px 0 20px;
+    border-bottom: solid 1px rgb(189,189,189);
+}
+.course ul li a span {
+    display: block;
+}
+.course ul li a span:nth-child(2n) {
+    font-size: 10px;
+    color: rgb(189,189,189);
+}
+.course ul li a:visited {
+    color: rgb(5,5,5);
+}
+.all-course {
+    position: absolute;
+    bottom: 1px;
+    height: 40px;
+    width: calc(100% - 30px);
+    line-height: 40px;
+    margin: 7px 15px 15px 15px;
+    border: solid 1px rgb(0, 164, 255, .9);
+    text-align: center;
+    font-size: 16px;
+    color: rgb(0, 164, 255, .9);
+    font-weight: 600;
+}
+.all-course a:visited {
+    color: rgb(0, 164, 255, .9);
+}
+/* 精品推荐模块 */
+.goods {
+    height: 60px;
+    background-color: rgb(255,255,255);
+    margin-top: 10px;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0,.1);
+}
+.goods a:visited { /* visited一定要写在hover前面，否则hover效果会被visited覆盖 */
+    color: rgb(0,0,0);
+}
+.goods a:hover {
+    color: rgb(0, 164, 255, .9);
+}
+.goods h3 {
+    float: left;
+    width: 132px;
+    line-height: 60px;
+    text-align: center;
+}
+.goods ul {
+    float: left;
+}
+.goods ul li {
+    float: left;
+}
+.goods ul li a {
+    line-height: 60px;
+    padding: 0 40px;
+    border-left: solid 1px rgb(189,189,189);
+}
+.goods .mod {
+    float: right;
+    width: 132px;
+    line-height: 60px;
+    text-align: center;
+}
+/* 核心部分 */
+.box {
+    margin-top: 35px;
+}
+.box-hd {
+    height: 42px;
+    line-height: 42px;
+}
+.box-hd a {
+    font-size: 12px;
+    color: rgb(191,191,191);
+}
+.box-hd a:visited { /* visited一定要写在hover前面，否则hover效果会被visited覆盖 */
+    color: rgb(191,191,191);
+}
+.box-hd a:hover {
+    color: rgb(0, 164, 255, .9);
+}
+.box-hd h3 {
+    float: left;
+}
+.box-hd ul {
+    float: left;
+    margin-left: 200px;
+}
+.box-hd ul li {
+    float: left;
+    padding: 0 36px;
+}
+.box-hd > a {
+    float: right;
+    margin-right: 30px;
+}
+.box-bd {
+    margin-top: 10px;
+}
+.box-bd ul {
+    width: 1225px;
+}
+.box-bd ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    margin: 0 15px 15px 0;
+    background-color: rgb(255,255,255);
+}
+.box-bd ul li img {
+    width: 100%;
+}
+.box-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color: 14px;
+    font-weight: 400;
+}
+.box-bd ul li .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: rgb(191,191,191);
+
+}
+.box-bd ul li .info span {
+    color: rgb(255,124,45);
+}
+.footer {
+    height: 420px;
+    background-color: pink;
+}
+.footer .w {
+    padding-top: 35px;
+}
+.copyright {
+    float: left;
+    width: 440px;
+}
+.copyright p {
+    margin-top: 26px;
+    font-size: 12px;
+    color: rgb(191,191,191);
+}
+.copyright a {
+    display: block;
+    margin-top: 13px;
+    width: 116px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: solid 2px rgb(0, 164, 255, .9);
+}
+.copyright a:visited {
+    color: rgb(0, 164, 255, .9);
+}
+.links {
+    float: right;
+}
+.links ul {
+    float: left;
+    margin: 0 32px 0 115px;
+    font-size: 12px;
+    color: rgb(191,191,191);
+}
+.links ul li:first-child {
+    font-size: 16px;
+}
+.links ul li a {
+    cursor: pointer;
+    line-height: 22px;
+}
+.links ul li a:visited {
+    color: rgb(191,191,191);
+}
+
+

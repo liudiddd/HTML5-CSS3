@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 盒子模型的本质：
+            网页布局的过程：
+                1.先准备好相关的网页元素，网页元素基本都是盒子（div、li等）；
+                2.利用css设置好盒子样式，然后摆放到相应的位置；
+                3.往盒子里面装内容。
+            网页布局的核心：就是利用css摆盒子。
+
+            
+        */
+
+        .border {
+            background-color: pink;
+            width: 200px;
+            height: 100px;
+            /* border: 1px solid red  简写 */
+            border-width: 5px;
+            border-style: solid; /* 边框样式，solid实线，dashed虚线，dotted点线 */ 
+            border-color: green; /* 边框颜色 */
+            padding: 5px 10px 15px 20px; /* 盒子的width和height指的是content的宽高，当盒子的width和height确定后，再设置border或padding，都会撑大盒子的大小 */
+
+        }
+
+        table {
+            width: 500px;
+            height: 249px;
+        }
+        table, td, th {
+            border: 1px solid pink;
+            border-collapse: collapse; /* 边框重叠，防止1+1=2的情况 */
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="border">粉红色的回忆</div>
+    <table>
+        <tr>
+            <th>排名</th>
+            <th>关键词</th>
+            <th>趋势</th>
+            <th>进入搜索</th>
+            <th>最近7日</th>
+            <th>相关链接</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td>下</td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧 </a><a href="#"> 图片</a><a href="#"> 百科</a></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td>下</td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧</a><a href="#">图片</a><a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>西游记</td>
+            <td>上</td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧</a><a href="#">图片</a><a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td>下</td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧</a><a href="#">图片</a><a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td>下</td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧</a><a href="#">图片</a><a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td>下</td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧</a><a href="#">图片</a><a href="#">百科</a></td>
+        </tr>
+    </table>
+</body>
+</html>

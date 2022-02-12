@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学成在线首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* 头部模块 */
+        li { /* 清除所有li自带样式 */
+            list-style: none;
+        }
+        .w { /* 版心 */
+            width: 990px;
+            margin: auto;
+        }
+        .header {
+            margin: 10px auto;
+            height: 35px;
+            background-color: rgb(241, 137, 137);
+        }
+        .logo {
+            float: left;
+            width: 165px;
+            height: 35px;
+            /* background-color: transparent; */
+            background-color: rgb(130, 157, 245);
+        }
+        .nav {
+            float: left;
+            margin-left: 20px;
+        }
+        .nav ul li {
+            float: left;
+        }
+        .nav ul li a:hover {
+            height: 32px;
+            border-bottom: 3px solid rgb(152, 229, 243);
+            color: rgb(152, 229, 243);
+        }
+        .nav ul li a {
+            display: inline-block;
+            height: 35px;
+            line-height: 35px;
+            padding: 0 15px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .search {
+            float: left;
+            height: 29px;
+            width: 200px;
+            margin: 3px 3px 3px 10px;
+        }
+        .search input {
+            float: left;
+            width: 155px;
+            height: 25px;
+            border: 1px solid rgb(185, 226, 253);
+            border-right: 0;
+            color: #bfbfbf;
+            font-size: 14px;
+            padding-left: 15px;
+        }
+        .search button {
+            float: left;
+            width: 27px;
+            height: 27px;
+            background-color: rgb(185, 226, 253);
+            border: 0;/* 去掉按钮的默认边框 */
+            background-image: url("button.png");
+        }
+        .user {
+            float: right;
+            height: 35px;
+
+        }
+        .user .portrait {
+            float: left;
+            width: 35px;
+            height: 35px;
+            border-radius: 3px;
+        }
+        .user .portrait img{
+            width: 100%;
+            height: 100%;
+        }
+        .user .nickname {
+            float: left;
+            height: 35px;
+            padding: 0 3px 0 3px;
+            line-height: 35px;
+        }
+
+        /* banner模块 */
+        .banner {
+            height: 500px;
+            background-color: rgb(195, 204, 247);
+        }
+        .banner>div { /* 版心 */
+            height: 500px;
+            background-image: url("./banner.jpg") ;
+        }
+        .subnav {
+            float: left;
+            width: 200px;
+            height: 100%;
+            background-color: rgba(0,0,0,.3);
+        }
+        .subnav ul {
+            height: 100%;
+        }
+        .subnav ul li {
+            width: 164px;
+            height: 55px;
+            padding: 0 18px 0 18px;
+        }
+        .subnav ul li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: rgb(215, 218, 252);
+            line-height: 55px;
+        }
+        .subnav ul li a span {
+            float: right;
+        }
+        /* 右侧课程表模块 */
+        .course {
+            float: right;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 180px;
+            height: 300px;
+            background-color: rgb(192, 137, 137);
+        }
+        .course h2{
+            height: 35px;
+            font-size: 16px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .course-title {
+            height: 35px;
+            background-color: rgb(200, 219, 248);
+            font: bold;
+            line-height: 35px;
+            text-align: center;
+        }
+        .course-body {
+            height: 265px;
+            background-color: rgb(210, 235, 243);
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部模块开始 -->
+    <div class="header w">
+        <!-- logo部分 -->
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <!-- 导航栏部分 nav -->
+        <div class="nav">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">课程</a></li>
+                <li><a href="">职业规划</a></li>
+            </ul>
+        </div>
+        <!-- 搜索模块 -->
+        <div class="search">
+            <input type="text" value="输入关键词" >
+            <button></button>
+        </div>
+        <!-- 用户模块 -->
+        <div class="user">
+            <div class="portrait">
+                <img src="touxiang.jpg" alt="">
+            </div>
+            <div class="nickname">nigulasikaiqi</div>
+        </div>
+    </div>
+    <!-- 头部模块结束 -->
+    <!-- banner模块开始 -->
+    <div class="banner">
+        <!-- 版心 -->
+        <div class="w">
+            <!-- 左侧导航栏 -->
+            <div class="subnav">
+                <ul>
+                    <li><a href="#">前端开发<span>&gt;</span></a></li>
+                    <li><a href="#">后端开发<span>&gt;</span></a></li>
+                    <li><a href="#">移动开发<span>&gt;</span></a></li>
+                    <li><a href="#">人工智能<span>&gt;</span></a></li>
+                    <li><a href="#">商业预测<span>&gt;</span></a></li>
+                    <li><a href="#">云计算&大数据<span>&gt;</span></a></li>
+                    <li><a href="#">运维&测试<span>&gt;</span></a></li>
+                    <li><a href="#">UI设计<span>&gt;</span></a></li>
+                    <li><a href="#">产品<span>&gt;</span></a></li>
+                </ul>
+            </div>
+            <!-- 右侧课程表 -->
+            <div class="course">
+                <!-- <div class="course-title">我的课程表</div> -->
+                <h2>我的课程表</h2>
+                <div class="course-body">
+                    <li>
+                        <h4>继续学习 程序设计语言</h4>
+                        <p>正在学习-使用对象</p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner模块结束 -->
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!-- 叹号+回车 生成骨架 -->
+<!-- 文档类型声明标签，告诉浏览器，当前页面类型为html5（注：文档类型有html4、html5、xhtml）
+    <!DOCTYPE html> 处于最上面，对整个页面进行声明，不是html标签
+-->
+<!DOCTYPE html>
+<!-- 对浏览器是一个提示作用，这是个英文网站，或zh-CN，表示是一个中文网站 -->
+<html lang="en">
+
+
+<head>
+    <!-- 文档使用的字符编码 -->
+    <meta charset="UTF-8">
+    <!-- 移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>做了个静态网页</title>0
+    <link rel="stylesheet" href="./style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1 id="titlee">这是标题哦</h1>
+    <p>水花兄弟联合砍下<strong>61</strong>分</p>
+    <p>根据2月份以后的成绩判定总冠军归属，如此一来湖人在2月份以后取得13胜3负战绩，尤其是还连续击败字母哥领衔的雄鹿与莱昂纳德领衔的快船。反观雄鹿2月份以后则是取得12胜5负的战绩，因而湖人将力压雄鹿夺得本赛季总冠军奖杯。</p>
+    <br/> 我是
+    <strong>加粗</strong>的文字 <br /> 我是
+    <b>加粗</b>的文字 <br /> 我是
+    <em>倾斜</em>的文字 <br /> 我是
+    <i>倾斜</i>的文字 <br /> 我是
+    <del>删除线</del> <br /> 我是
+    <s>删除线</s> <br /> 我是
+    <ins>下划线</ins> <br /> 我是
+    <u>下划线</u> <br /> <br />
+
+    <!-- div是一个大盒子，span是一个小盒子 -->
+    <div class="div-blue">
+        我是一个div标签，我自己独占一行 <br>
+
+    </div>
+    <!-- div是division的缩写，表示分割、分区，独占一行 -->
+    <a href="#" class="a-none">百度一下</a> <br/>
+    <a href="#">百度两下</a>
+    <div id="id-style"> 我也是一个div标签，我自己独占一行 </div>
+    <span> 今日头条 </span> <span> 百度 </span> <span> 腾讯 </span> <br/>
+    <!-- span跨度、跨距，一行可以有多个span -->
+    <img src="http://yun.itheima.com/course/647.html?2004ku-xk1" alt="擦！图片哪去了。。。" /> <br/>
+    <img src="100.png" alt="擦！图片哪去了。。。" title="哎呦呵" width="200px" /> <br/>
+    <img src="100.png" alt="擦！图片哪去了。。。" title="哎呦呵" style="width: 100px; height: 50px; border=10px;" /> <br/>
+
+    <div>
+        <a href="http://www.qq.com" target="_self">腾讯</a> <br/>
+        <a href="http://www.baidu.com" target="_blank">百度</a> <br/>
+        <a href="#" target="_blank">空链接</a> <br/>
+        <a href="#titlee">回到顶部</a> <br/>
+        <a href="#myul">跳转到ul</a>
+    </div>
+
+    <!-- 单元格合并 -->
+    <table border="1px">
+        <tr>
+            <td colspan="3">这是table的标题</td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>1</td>
+            <td rowspan="2">图片</td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td>小明</td>
+        </tr>
+    </table>
+
+    <!-- 无序列表 -->
+    <ul>
+        <li class="li-red">刘备</li>
+        <li>关羽</li>
+        <li>张飞</li>
+    </ul>
+
+    <!-- 自定义列表 -->
+    <dl>
+        <dt>关注我们</dt>
+        <dd>新浪微博</dd>
+        <dd>官方微信</dd>
+    </dl>
+
+    <ol>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li><span>我是ol 的孙子span</span>></a>2</li>
+        <span>我是ol的亲儿子span</span>
+    </ol>
+    <ul id="myul" class="nav">
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><span>ul .nav li span</span></li>
+
+    </ul>
+    <input type="text" name="a" id="a"> <br>
+    <input type="button" value="按钮">
+
+    <!--  
+        css的元素显示模式
+        1. 元素的显示模式就是元素（标签）以什么方式进行显示，比如<div>自己占一行，比如一行可以放多个<span>。
+           HTML元素一般分为块元素和行内元素两种类型。
+        2. 块元素
+            div,ul,li
+            特点：
+                1.自己独占一行
+                2.高度、宽度、外边距以及内边距都可以控制
+                3.宽度默认是容器（父级宽度）的100%
+                4.是一个容器及盒子，里面可以放行内或者块级元素
+            注意：
+                1.文字类的元素内不能使用块级元素
+                2.<p>标签主要用于存放文字，因此<p>里面不能放块级元素，特别是不能放div
+                3.同理，<h1>...<h6>等都是文字类块级标签，里面也不能放其他块级元素
+        3.行内元素（内联元素）
+            a,strong,b,em,i,del,s,ins,u,span
+            span标签是最典型的行内元素。            
+            特点：
+                1.相邻元素在一行上，一行可以显示多个
+                2.height、width直接设置是无效的
+                3.默认宽度就是它本身内容的宽度
+                4.行内元素只能容纳文本或其他行内元素
+                特殊情况：a标签中可以放块级元素
+        4.行内块元素
+            img,input,td
+            它们同时具有块元素和行内元素的特点
+            特点：
+                1.和相邻行内块元素在一行上，但是他们之间会有空白缝隙。一行可以显示多个
+                2.默认宽度就是它本身内容的宽度（行内元素特点）
+                3.高度、外边距以及内边距都可以控制（块级元素特点）
+    -->
+    <div>
+
+    </div>
+</body>
+
+</html>
